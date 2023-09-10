@@ -40,7 +40,7 @@ class BlockChain {
     this.blocks.push(newBlock);
   }
   public getBlocks() {
-    return [...this.blocks];
+    return [...this.blocks]; //Not Hacked
   }
 }
 
@@ -49,5 +49,6 @@ const blockchain = new BlockChain();
 blockchain.addBlock("a");
 blockchain.addBlock("b");
 blockchain.addBlock("c");
+blockchain.getBlocks().push(new Block("xxx", 999, "HACKEDDDDD"));
 
 console.log(blockchain.getBlocks());
